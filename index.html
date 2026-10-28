@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Learning App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="tag">LEARN • REVISE • REPEAT</p>
+      <h1>Flashcard <span>Studio</span></h1>
+      <p class="subtitle">Small cards, big knowledge!</p>
+    </header>
+
+    <section class="deck">
+      <div class="progress-info">
+        <span id="cardNumber">Card 1 of 10</span>
+        <span id="progressPercent">10% completed</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+
+      <button id="flashcard" class="flashcard" type="button"
+        aria-label="Flashcard. Click to reveal the answer."
+        aria-pressed="false">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="face-label">QUESTION</span>
+            <span class="card-icon">💡</span>
+            <h2 id="question">What is HTML?</h2>
+            <span class="flip-hint">↻ Click to reveal answer</span>
+          </div>
+
+          <div class="card-face card-back">
+            <span class="face-label">ANSWER</span>
+            <span class="card-icon">🎯</span>
+            <p id="answer">HTML structures web page content.</p>
+            <span class="flip-hint">↻ Click to see question</span>
+          </div>
+        </div>
+      </button>
+
+      <p class="keyboard-hint">Tip: Use ← → arrow keys to navigate</p>
+
+      <div class="navigation">
+        <button id="prevBtn" class="nav-btn secondary" type="button">
+          ← Previous
+        </button>
+        <button id="shuffleBtn" class="nav-btn shuffle" type="button">
+          🔀 Shuffle
+        </button>
+        <button id="nextBtn" class="nav-btn primary" type="button">
+          Next →
+        </button>
+      </div>
+
+      <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <p>Made for curious minds ✨</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
